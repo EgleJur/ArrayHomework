@@ -25,29 +25,29 @@ public class Main {
         while (true) {
             try {
                 int input = Integer.valueOf(scanner.nextLine());
-                if (input == 0) {
-                    break;
+                if(input == 0 || input == 1 || input == 2 || input == 3){
+                    if (input == 0) {
+                        break;
+                    }
+
+                    if(input == 1){
+                        System.out.println("Result: " + ArraySum.sum(list, dayOfWeek));
+                    }
+                    if(input == 2){
+                        System.out.println("Size: " + ArraySize.size(list));
+                    }
+                    if(input == 3){
+                        System.out.println("Numbers in array: ");
+                        NumbersInArray.numbers(list);
+                    }
+                }
+                else{
+                    System.out.println("Invalid input. Please enter an integer.");
                 }
 
-                if(input == 1){
-                    System.out.println("Result: " + ArraySum.sum(list, dayOfWeek));
-                }
-                if(input == 2){
-                    System.out.println("Size: " + ArraySize.size(list));
-                }
-                if(input == 3){
-                    System.out.println("Numbers in array: ");
-                    NumbersInArray.numbers(list);
-                }
             } catch (NumberFormatException e) {
                 System.out.println("Invalid input. Please enter an integer.");
             }
         }
-
-//        System.out.println("Result: " + ArraySum.sum(list, dayOfWeek));
-//        System.out.println("Size: " + ArraySize.size(list));
-//        System.out.println("Numbers in array: ");
-//        NumbersInArray.numbers(list);
-
     }
 }
